@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Contents\Images\Icons\Logo.ico</ApplicationIcon>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AssemblyName>PriceCalculator</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Contents\Images\Icons\Logo.ico" />
+    <None Remove="Contents\Images\Logo.png" />
+    <None Remove="Contents\Images\Logo.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ModernUI.WPFCore" Version="2.0.0" />
+    <PackageReference Include="Ookii.Dialogs.Wpf.NETCore" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PriceCalculator.BLL\PriceCalculator.BLL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Contents\Images\Icons\Logo.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\Images\Logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\Images\Logo.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

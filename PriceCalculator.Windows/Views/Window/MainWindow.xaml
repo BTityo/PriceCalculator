@@ -1,0 +1,24 @@
+﻿<mui:ModernWindow x:Class="PriceCalculator.Windows.Views.Window.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+        xmlns:local="clr-namespace:PriceCalculator.Windows"
+        mc:Ignorable="d"
+        Title="Árajánlat számoló --- By Tityo" Height="600" Width="800" MinWidth="1200" MinHeight="720"
+        WindowStartupLocation="CenterScreen" ResizeMode="CanResizeWithGrip"
+        ContentSource="/Views/Page/PriceCalculator.xaml"
+        LogoData="M202.065,330.928l9.22-39.12c0,0,2.856-11.168,15.196-11.168c12.313,0,97.607,3.25,116.495-56.814     c6.931-21.964,11.729-74.051-74.394-74.051h-62.197c0,0-12.929-0.579-16.118,12.793l-40.651,170.699     c0,0-1.742,10.702,9.375,10.702c11.125,0,27.772,0,27.772,0S199.556,344.655,202.065,330.928z M225.515,231.639l8.261-34.7     c0,0,2.627-9.432,11.12-10.827c8.497-1.405,22.959,0.243,26.688,0.934c24.163,4.415,19.021,26.658,19.021,26.658     c-4.795,34.34-59.705,29.565-59.705,29.565C222.278,240.247,225.515,231.639,225.515,231.639z" WindowState="Maximized" >
+    <mui:ModernWindow.TitleLinks>
+        <mui:Link DisplayName="Beállítások" Source="/Views/Page/Setting.xaml" />
+    </mui:ModernWindow.TitleLinks>
+    <mui:ModernWindow.MenuLinkGroups>
+        <mui:LinkGroup DisplayName="Árajánlat">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Árajánlat számoló" Source="/Views/Page/PriceCalculator.xaml" />
+                <mui:Link DisplayName="Mentett árajánlatok" Source="/Views/Page/SavedPrice.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+    </mui:ModernWindow.MenuLinkGroups>
+</mui:ModernWindow>
