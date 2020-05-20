@@ -71,13 +71,22 @@ namespace PriceCalculator.Windows.Views.Page
         // Delete all calculation
         private void buttonDeleteAllCalculation_Click(object sender, RoutedEventArgs e)
         {
-
+            calculationViewModels.Clear();
         }
 
-        // Delete selected calculation
+        // Delete selected calculations
         private void buttonDeleteCalculation_Click(object sender, RoutedEventArgs e)
         {
+            List<CalculationViewModel> tempCalculations = new List<CalculationViewModel>();
+            foreach (CalculationViewModel selectedCalculation in dataGridCalculations.SelectedItems)
+            {
+                tempCalculations.Add(selectedCalculation);
+            }
 
+            foreach (CalculationViewModel calculation in tempCalculations)
+            {
+                calculationViewModels.Remove(calculation);
+            }
         }
 
         // Add a new calculation
